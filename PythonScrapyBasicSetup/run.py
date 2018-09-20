@@ -5,7 +5,7 @@ from scrapy.utils.project import get_project_settings
 
 from spiders.iptester import IPTesterSpider
 from spiders.uatester import UATesterSpider
-
+#from spiders.hinditracks import HinditracksSpider
 def run():
     configure_logging()
     # importing project settings for further usage
@@ -18,6 +18,7 @@ def run():
     def crawl():
         yield runner.crawl(IPTesterSpider)
         yield runner.crawl(UATesterSpider)
+        #yield runner.crawl(hinditracks)
         reactor.stop()
 
     crawl()

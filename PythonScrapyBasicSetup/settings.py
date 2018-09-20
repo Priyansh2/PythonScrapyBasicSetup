@@ -30,7 +30,7 @@ RETRY_HTTP_CODES = [500, 502, 503, 504]
 COOKIES_ENABLED = False
 
 # TOR SETTINGS
-HTTP_PROXY = 'http://127.0.0.1:8118'
+HTTP_PROXY = 'http://127.0.0.1:8118' #8118
 AUTH_PASSWORD = 'secretPassword'
 CONTROL_PORT = 9051
 
@@ -46,6 +46,13 @@ MAX_REQ_PER_IP = 1000
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
     'PythonScrapyBasicSetup.middlewares.user_agent.RandomUserAgentMiddleware': 400,
-    # 'PythonScrapyBasicSetup.middlewares.proxy.HttpProxyMiddleware': 410,
-    'PythonScrapyBasicSetup.middlewares.proxy.TorProxyMiddleware': 410
+    'PythonScrapyBasicSetup.middlewares.proxy.HttpProxyMiddleware': 410,
+    #'PythonScrapyBasicSetup.middlewares.proxy.TorProxyMiddleware': 410,
+    #'scrapy_splash.SplashCookiesMiddleware': 723,
+    #'scrapy_splash.SplashMiddleware': 725,
+    #'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
 }
+'''SPLASH_URL = 'http://localhost:8050'
+DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
+HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
+'''

@@ -1,11 +1,14 @@
 import random
 import logging
-import urllib2
+#import urllib2
 from stem import Signal
 from stem.control import Controller
 from bs4 import BeautifulSoup
 from scrapy.utils.project import get_project_settings
-
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib2 import urlopen
 class TorProxyMiddleware(object):
 
     def __init__(self):
@@ -58,7 +61,7 @@ class HttpProxyMiddleware(object):
         return self.source['url'] % (self.source['port'], self.source['type'])
 
     def query_proxies(self):
-        request = urllib2.urlopen(self._build_source_url())
+        request = urlopen(self._build_source_url())
         if request.getcode() == 200:
             i = 0
             soup = BeautifulSoup(request, 'html.parser')

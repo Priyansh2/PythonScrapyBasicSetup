@@ -1,10 +1,12 @@
 import random
 from xml.dom import minidom
 from scrapy.utils.project import get_project_settings
-
+import os
 class RandomUserAgentMiddleware(object):
     settings = get_project_settings()
-    source_path = 'data/user_agents.xml'
+    script_path=os.path.dirname(os.path.realpath(__file__))
+
+    source_path = script_path[0:len(script_path)-11]+'data/user_agents.xml'
 
     def __init__(self, *args, **kwargs):
         xmldoc = minidom.parse(self.source_path)
