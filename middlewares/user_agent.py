@@ -5,9 +5,9 @@ import os
 class RandomUserAgentMiddleware(object):
     settings = get_project_settings()
     script_path=os.path.dirname(os.path.realpath(__file__))
-
+    #print(script_path)
     source_path = script_path[0:len(script_path)-11]+'data/user_agents.xml'
-
+    #print(source_path)
     def __init__(self, *args, **kwargs):
         xmldoc = minidom.parse(self.source_path)
         items = xmldoc.getElementsByTagName('useragent')
