@@ -1,0 +1,2 @@
+Mozilla/1.10 [en] (Compatible; RISC OS 3.70; Oregano 1.10)
+Mozilla/1.10 [en]  (Compatible;  RISC OS 3.70;  Oregano 1.10)

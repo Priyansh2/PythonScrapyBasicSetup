@@ -1,0 +1,3 @@
+AmigaVoyager/3.2 (AmigaOS/MC680x0)
+AmigaVoyager/2.95 (compatible; MC680x0; AmigaOS; SV1)
+AmigaVoyager/2.95 (compatible; MC680x0; AmigaOS)
