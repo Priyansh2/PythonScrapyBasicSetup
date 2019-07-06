@@ -1,9 +1,9 @@
 import os,sys,re,json
 from collections import Counter,defaultdict
-data1 = open("user_agents.txt","r").read().split("\n")
+data1 = open("raw_data/user_agents.txt","r").read().split("\n")
 #print(len(data1))
 data1_user_agents=list(set(data1))
-data2 = json.load(open("user-agents.json","r"))
+data2 = json.load(open("rawa_data/user-agents.json","r"))
 #print(len(data2))
 data2_user_agents=[]
 for item in data2:
